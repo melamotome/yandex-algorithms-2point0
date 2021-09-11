@@ -5,16 +5,9 @@ import java.util.Scanner;
 public class _1B {
 
     private int minNOfStations(int n, int big, int small) {
-        //Make sure big has the biggest number of the two
-        if (big < small) {
-            int temp = big;
-            big = small;
-            small = temp;
-        }
-        int d1 = big - small;
-        int d2 = small + n - big;
-        if (d1 < d2) return d1 - 1;
-            else return d2 - 1;
+        int d1 = Math.abs(big - small) - 1;
+        int d2 = Math.abs(n - 2 - d1);
+        return Math.min(d1, d2);
     }
 
     private void run() {
