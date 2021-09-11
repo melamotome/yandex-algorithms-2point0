@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class _1C {
 
     private int isDefiniteDate(int a, int b, int year) {
-        if (a > 12 || b > 12) return 1;
-            else return 0;
+        if (a > 12 || b > 12 || a == b) {
+            return 1;
+        }
+        return 0;
     }
 
     private void run() {
